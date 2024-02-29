@@ -1,8 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
+import Hamburger from "./hamburger"
+
 export default function Header() {
     return (<header>
-            <div >
+                 <Hamburger />
+            <div className="border-y-4 border-navyBlue">
                 <div className="bg-navyBlue">
                 <h2>
                     Call us:
@@ -21,8 +24,10 @@ export default function Header() {
                 <Link href="./ofertas">Ofertas</Link>
                 <Link href="./destinos">destinos</Link>
                 <Link href="./blog">blog</Link>
+
             </nav>
             </div>
+    
     </header>)
 
 
