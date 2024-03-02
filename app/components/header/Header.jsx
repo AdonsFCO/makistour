@@ -9,7 +9,6 @@ export default function Header() {
   const [navIsOpen, setNavOpen] = useState(false);
 
   return (
-    <>
       <header>
         <div className="MOBILE-MENU grid lg:hidden grid-cols-2">
         <Link href="./" >
@@ -38,13 +37,22 @@ export default function Header() {
           </nav>
         </div>
 
-        <div className="DESKTOP-HEADER hidden lg:flex">
-          <div className="border-y-4 border-navyBlue">
-            <div className="bg-navyBlue">
-              <h2>Call us:</h2>
-              <h2>+1 (849) 357-7580</h2>
+        <div className="DESKTOP-HEADER hidden lg:flex flex-col">
+     
+     
+          <div className="border-y-4 border-navyBlue ">
+            <div className="bg-navyBlue flex flex-row justify-end">
+    
+              <div className="px-10 flex flex-row">
+              <h2 className="px-2">Call us:</h2>
+             
+              <h2 className="px-2">+1 (849) 357-7580</h2>
+              <div>
+
               <button>Buscar</button>
               <input type="text" />
+              </div>
+              </div>
             </div>
           </div>
           <div className=" bg-lightNavyBlue">
@@ -59,6 +67,5 @@ export default function Header() {
           </div>
         </div>
       </header>
-    </>
   );
 }
