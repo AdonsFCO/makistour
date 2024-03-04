@@ -2,14 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    -webkit-appearance: none !important; /* Safari */
-    -moz-appearance: none !important; /* Firefox */
-    appearance: none !important; /* Modern browsers */
-    margin: 0; padding: 0;
-  }
-  
-  html {
-    background-color: white !important; /* Set background color to white */
-    margin: 0; padding: 0;
-  }
+.html, body
+{
+    padding: 0;
+    margin: 0;
+}
