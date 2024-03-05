@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import Hamburger from "./Hamburger";
 import react, { useState } from "react";
 import styles from "./navStyles.module.css";
@@ -14,17 +12,18 @@ export default function Header() {
   return (
     <header className="lg:border-y-4 border-navyBlue shadow-lg font-serif">
       <div className="MOBILE-MENU grid lg:hidden grid-cols-2">
-        <Link href="./">
-          <Image src="/logo.png" width={100} height={100} />
+        <Link href="./" aria-label="ir a pagina principal">
+          <Image src="/logo.png" alt="logo" width={100} height={100} />
         </Link>
         <Hamburger
           onClick={() => setNavOpen((prev) => !prev)}
-          className="justify-self-end p-4"
+          className="justify-self-end px-16"
+          ariaExpanded={navIsOpen} //depending if the nav is open or not will update this value 
         />
 
         <nav className={navIsOpen ? styles.showMenuNav : styles.hideMenuNav}>
           <Link href="./">
-            <Image src="/logo.png" width={100} height={100} />
+            <Image src="/logo.png" aria-label="ir a pagina principal" alt="logo" width={100} height={100} />
           </Link>
 
           <Link href="./sale">Ofertas</Link>
@@ -33,8 +32,8 @@ export default function Header() {
 
           <Link href="./contact">Contacto</Link>
 
-          <div onClick={() => setNavOpen(!navIsOpen)} className="p-5">
-            X
+          <div onClick={() => setNavOpen(!navIsOpen)} className="p-5" aria-label="Salir del menu" role="button">
+            Salir
           </div>
         </nav>
       </div>
@@ -43,8 +42,8 @@ export default function Header() {
         <div className="border-y-4 border-navyBlue">
           <div className="bg-navyBlue flex flex-row justify-end p-1 ">
             <div className="pr-32 flex flex-row">
-              <h3>Call us:</h3>
-              <p class="px-2 text-orange">
+              <h3>Llamanos!:</h3>
+              <p className="px-2 text-orange">
                 <a href="tel:+18493577580">+1 (849) 357-7580</a>
               </p>
             <SearchBox/>
@@ -53,7 +52,7 @@ export default function Header() {
         </div>
         <div className=" bg-lightNavyBlue flex justify-between items-center">
           <Link href="./">
-            <Image src="/logo.png" width={70} height={70}  className="ms-32"/>
+            <Image src="/logo.png" alt="logo" width={70} height={70} aria-label="ir a pagina principal" className="ms-32"/>
           </Link>
           <nav
             aria-label="Navegación principal"
@@ -79,7 +78,7 @@ export default function Header() {
             </Link>
             <Link
               href="./contact"
-              className="px-4 py-2 bg-orange text-white hover:bg-orange-dark"
+              className="px-4 py-2 bg-orange text-black hover:bg-orange-dark"
               aria-expanded="false"
             >
               Contacto

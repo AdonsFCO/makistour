@@ -21,6 +21,7 @@ const SearchBar = () => {
         type="button"
         className="absolute right-0 top-0.5 rounded-none bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white py-0.5 px-1 text-black flex items-center" // Added `flex items-center`
         onClick={handleSearch}
+        aria-label="buscar"
       >
         <FontAwesomeIcon icon={faSearch} />
       </button>

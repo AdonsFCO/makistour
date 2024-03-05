@@ -1,16 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import react, { useState } from "react";
 
-const Hamburger = ({ onClick, className}) => {
+const Hamburger = ({ onClick, className, ariaExpanded }) => {
   return (
-    <div className={className}>
-      <FontAwesomeIcon
-        icon={faBars}
-        width="15px"
-        onClick={onClick}
-      />
-    </div>
+    <button
+      className={className}
+      aria-expanded={ariaExpanded}
+      aria-label="menu"
+      onClick={onClick}
+    >
+      <FontAwesomeIcon icon={faBars} height={30} />
+    </button>
   );
 };
 
