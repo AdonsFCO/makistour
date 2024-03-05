@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Hamburger from "./Hamburger";
+import Hamburger from "./Burger";
 import react, { useState } from "react";
 import styles from "./navStyles.module.css";
 import SearchBox from "./SearchBar";
