@@ -1,10 +1,10 @@
 export default function Home() {
   return (
     <main>
-      <h1 class="text-4xl font-serif font-bold">
+      <h1 className="text-4xl font-serif font-bold">
         This is a heading using Playfair Display.
       </h1>
-      <p class="text-base font-sans">This is a paragraph using Open Sans.</p>
+      <p className="text-base font-sans">This is a paragraph using Open Sans.</p>
     </main>
   );
 }
