@@ -15,6 +15,7 @@ module.exports = {
         bostonBlue: "#408abe", //Posible main color
         fireBush: "#e98b27", //Posible main color
         panache: "#f3faf6", //Posible main color
+        darkBlueGray:"#111827bf",  
         navyBlue: "#073b4c",
         orange: "#ff8000",
         lightNavyBlue: "#1f618d",
