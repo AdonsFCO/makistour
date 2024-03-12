@@ -7,6 +7,7 @@ export const metadata = {
   description: "Expertos en turismo",
 };
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

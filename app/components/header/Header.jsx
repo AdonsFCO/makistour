@@ -13,7 +13,15 @@ export default function Header() {
     <header className="lg:border-y-4 border-navyBlue shadow-lg font-serif">
       <div className="MOBILE-MENU grid lg:hidden grid-cols-2">
         <Link href="./" aria-label="ir a pagina principal">
-          <Image src="/logo.png" alt="logo" width={100} height={100} />
+          <Image
+            src="/logo.png"
+            alt="logo"
+            width={100}
+            height={100}
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </Link>
         <Hamburger
           onClick={() => setNavOpen((prev) => !prev)}
@@ -23,7 +31,16 @@ export default function Header() {
 
         <nav className={navIsOpen ? styles.showMenuNav : styles.hideMenuNav}>
           <Link href="./">
-            <Image src="/logo.png" aria-label="ir a pagina principal" alt="logo" width={100} height={100} />
+            <Image
+              src="/logo.png"
+              aria-label="ir a pagina principal"
+              alt="logo"
+              width={100}
+              height={100}
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </Link>
 
           <Link href="./sale">Ofertas</Link>
@@ -38,7 +55,7 @@ export default function Header() {
         </nav>
       </div>
 
-      <div className={"hidden lg:flex flex-col text-white"}>
+      <div className={"hidden lg:flex flex-col text-white fixed top-0 fixed top-0 left-0 right-0 z-50 opacity-90"}>
         <div className="border-y-4 border-navyBlue">
           <div className="bg-navyBlue flex flex-row justify-end p-1 ">
             <div className="pr-32 flex flex-row">
@@ -52,7 +69,17 @@ export default function Header() {
         </div>
         <div className=" bg-lightNavyBlue flex justify-between items-center">
           <Link href="./">
-            <Image src="/logo.png" alt="logo" width={70} height={70} aria-label="ir a pagina principal" className="ms-32"/>
+            <Image
+              src="/logo.png"
+              alt="logo"
+              width={70}
+              height={70}
+              aria-label="ir a pagina principal"
+              className="ms-32"
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </Link>
           <nav
             aria-label="Navegación principal"
