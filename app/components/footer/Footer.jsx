@@ -5,7 +5,15 @@ export default function Footer() {
   return (
     <footer className="flex flex-col md:flex-row justify-between bg-gray-900 text-gray-200 p-4 items-center">
       <Link href="/">
-        <Image src="/logo.png" alt="Makis Tour logo" width={70} height={70} />
+        <Image
+          src="/logo.png"
+          alt="Makis Tour logo"
+          width={70}
+          height={70}
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </Link>
       <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-4 mt-4 md:mt-0">
         <Link href="./privacy" className="text-sm hover:underline">

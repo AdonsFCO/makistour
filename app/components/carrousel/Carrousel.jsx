@@ -34,6 +34,7 @@ export default function Carrousel() {
       autoplay-disable-on-interaction="false"
       space-between="30"
       loop="true"
+      
      
       prevent-clicks="false"
     >
@@ -45,6 +46,7 @@ export default function Carrousel() {
                 src={image.src}
                 alt={image.title}
                 className="w-full object-cover relative"
+                priority
                 loading="eager" 
                 fill
                 sizes="100vw"

@@ -9,7 +9,22 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Open Sans", "sans-serif"],
+        merriweatherLight: ['Merriweather', 'serif'],
+        // merriweatherLightItalic: ['Merriweather', 'serif'],
+        // merriweatherRegular: ['Merriweather', 'serif'],
+        // merriweatherRegularItalic: ['Merriweather', 'serif'],
+        // merriweatherBold: ['Merriweather', 'serif'],
+        // merriweatherBoldItalic: ['Merriweather', 'serif'],
+        // merriweatherBlack: ['Merriweather', 'serif'],
+        // merriweatherBlackItalic: ['Merriweather', 'serif'],  
         serif: ["Playfair Display", "serif"],
+
+      },
+      fontWeight: {
+        light: 300,
+        normal: 400,
+        bold: 700,
+        black: 900,
       },
       colors: {
         bostonBlue: "#408abe", //Posible main color
@@ -27,6 +42,7 @@ module.exports = {
         submarine: "#b6c0c4",
         limedSpruce: "#3c525a",
       },
+      
     },
   },
   plugins: [],
